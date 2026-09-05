@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Wellness Blog | Ado Care</title>
+</head>
+<body class="blog-page">
+    <nav class="nav">
+        <div class="logo">Ado Care</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="specialists.html">Our Specialists</a>
+            <a class="active" href="blogs.html">Blogs</a>
+        </div>
+        <div class="right-links">
+            <a class="button emergency" href="tel:+2348001234567">Emergency</a>
+            <a class="button" href="index.html#book-appointment">Book An Appointment</a>
+            <a class="button" href="index.html#book-appointment">Sign In</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="specialists.html">Our Specialists</a>
+                <a class="active" href="blogs.html">Blogs</a>
+            </div>
+            <div class="mobile-actions">
+                <a class="button emergency" href="tel:+2348001234567">Emergency</a>
+                <a class="button" href="index.html#book-appointment">Book An Appointment</a>
+                <a class="button" href="index.html#book-appointment">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="blog-hero">
+            <p class="reader-category">Ado Care Journal</p>
+            <h1>Health that fits real life.</h1>
+            <p>Clear, practical guidance from our care team to help you make confident choices for yourself and your family.</p>
+        </header>
+
+        <section class="blogs" id="all-articles">
+            <h1>Latest from our specialists</h1>
+            <div class="articles">
+                <article class="article-card glass-card blog-reveal">
+                    <div class="article-thumb"><img src="assets/healthy_lifestyle.png" alt="Healthy lifestyle"></div>
+                    <div class="article-body">
+                        <div class="article-meta">5 min read • By Dr. Marcus Thorne</div>
+                        <h3 class="article-title">The Science of Longevity: 5 Daily Habits That Add Quality Years to Life</h3>
+                        <p class="article-excerpt">Five grounded habits can support a longer, more active life without requiring a perfect routine.</p>
+                        <button class="btn-link read-article-btn" data-article="1">Read Full Article →</button>
+                    </div>
+                </article>
+                <article class="article-card glass-card blog-reveal">
+                    <div class="article-thumb"><img src="assets/doctor_cardiology.png" alt="Heart health"></div>
+                    <div class="article-body">
+                        <div class="article-meta">6 min read • By Dr. M. Rivera</div>
+                        <h3 class="article-title">A Practical Guide to Protecting Your Heart Every Day</h3>
+                        <p class="article-excerpt">Small changes to movement, food, and checkups can create meaningful heart health habits.</p>
+                        <button class="btn-link read-article-btn" data-article="2">Read Full Article →</button>
+                    </div>
+                </article>
+                <article class="article-card glass-card blog-reveal">
+                    <div class="article-thumb"><img src="assets/doctor_neurology.png" alt="Mental wellbeing"></div>
+                    <div class="article-body">
+                        <div class="article-meta">4 min read • By Dr. S. Chen</div>
+                        <h3 class="article-title">Simple Ways to Create More Mental Space</h3>
+                        <p class="article-excerpt">Practical ways to notice stress, recover, and find support before your reserves run low.</p>
+                        <button class="btn-link read-article-btn" data-article="3">Read Full Article →</button>
+                    </div>
+                </article>
+                <article class="article-card glass-card blog-reveal">
+                    <div class="article-thumb"><img src="assets/nutrition_superfoods.png" alt="Family nutrition"></div>
+                    <div class="article-body">
+                        <div class="article-meta">4 min read • By Dr. A. Kapoor</div>
+                        <h3 class="article-title">Helping Children Build Healthy Routines</h3>
+                        <p class="article-excerpt">Make meals, sleep, movement, and honest conversations part of a child’s everyday rhythm.</p>
+                        <button class="btn-link read-article-btn" data-article="4">Read Full Article →</button>
+                    </div>
+                </article>
+                <article class="article-card glass-card blog-reveal">
+                    <div class="article-thumb"><img src="assets/Professional therapist helping patient to walk using walker during rehabilitation in hospital _ Premium Photo.jpg" alt="Rehabilitation support"></div>
+                    <div class="article-body">
+                        <div class="article-meta">5 min read • By Dr. N. Adeyemi</div>
+                        <h3 class="article-title">How to Support a Stronger Recovery After Treatment</h3>
+                        <p class="article-excerpt">Recovery is a process. Learn how care plans, patience, and support work together.</p>
+                        <button class="btn-link read-article-btn" data-article="5">Read Full Article →</button>
+                    </div>
+                </article>
+                <article class="article-card glass-card blog-reveal">
+                    <div class="article-thumb"><img src="assets/Nurse in rubber blue medical gloves takes blood from a vein for laboratory test_ medical tests _ Premium Photo.jpg" alt="Preventive health checkup"></div>
+                    <div class="article-body">
+                        <div class="article-meta">3 min read • Ado Care Clinical Team</div>
+                        <h3 class="article-title">Why Preventive Checkups Belong on Your Calendar</h3>
+                        <p class="article-excerpt">A checkup is a useful conversation about staying well and planning for the years ahead.</p>
+                        <button class="btn-link read-article-btn" data-article="6">Read Full Article →</button>
+                    </div>
+                </article>
+            </div>
+
+            <h1 class="blog-reveal">Small habits, steady health</h1>
+            <div class="health-matters">
+                <div class="tip-card blog-reveal"><h4>Morning light</h4><p>Spend a few minutes outdoors early in the day to support your body clock and energy.</p></div>
+                <div class="tip-card blog-reveal"><h4>Move between tasks</h4><p>Stand, stretch, or walk for two minutes whenever you finish a focused block of work.</p></div>
+                <div class="tip-card blog-reveal"><h4>Protect your sleep</h4><p>Keep a consistent bedtime and make your room cool, quiet, and comfortably dark.</p></div>
+                <div class="tip-card blog-reveal"><h4>Check your labels</h4><p>Compare packaged foods for salt, added sugar, and fiber before making your choice.</p></div>
+                <div class="tip-card blog-reveal"><h4>Pause and breathe</h4><p>Try four slow breaths before responding to a stressful message or situation.</p></div>
+                <div class="tip-card blog-reveal"><h4>Keep water close</h4><p>A bottle within reach makes hydration easier during busy clinic, school, or work days.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="article-reader" id="articleReader" aria-hidden="true">
+        <div class="reader-backdrop" data-close-reader></div>
+        <article class="reader-panel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+            <button class="reader-close" type="button" data-close-reader aria-label="Close article">&times;</button>
+            <img class="reader-image" src="assets/healthy_lifestyle.png" alt="">
+            <div class="reader-body">
+                <span class="reader-category"></span>
+                <h2 class="reader-title" id="readerTitle"></h2>
+                <div class="reader-meta"></div>
+                <div class="reader-content"></div>
+            </div>
+        </article>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

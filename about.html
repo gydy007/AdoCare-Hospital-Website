@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>About Us — Ado Care</title>
+</head>
+<body class="page-about">
+    <nav class="nav">
+        <div class="logo">Ado Care</div>
+
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="specialists.html">Our Specialists</a>
+            <a href="blogs.html">Blogs</a>
+        </div>
+
+        <div class="right-links">
+            <a class="button emergency" href="">Emergency</a>
+            <a class="button" href="index.html#book-appointment">Book An Appointment</a>
+            <a class="button" href="">Sign In</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="specialists.html">Our Specialists</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+            <div class="mobile-actions">
+                <a class="button emergency" href="">Emergency</a>
+                <a class="button" href="index.html#book-appointment">Book An Appointment</a>
+                <a class="button" href="">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page intro / same visual language as homepage about -->
+        <section>
+            <div class="about-us" id="about-us" style="margin-top: 40px;">
+                <div class="about-image">
+                    <img src="assets/download.jpg" alt="Ado Care hospital">
+                </div>
+
+                <div class="about-text">
+                    <h2>
+                        <span class="about-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#1b7b8a" stroke-width="1.5" class="about-ring"/>
+                                <path d="M12 7v10M7 12h10" stroke="#1b7b8a" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        About us
+                    </h2>
+
+                    <h1>Clinical Excellence. Compassionate Care. Community Commitment.</h1>
+
+                    <p>
+                        Lumina Hospital is a fully accredited private healthcare institution
+                        dedicated to delivering world-class, affordable medical services to the people of
+                        Ado-Ekiti and its environs. We bridge the gap between advanced medical technology
+                        and accessible healthcare—serving civil servants, traders, students, and families alike.
+                    </p>
+
+                    <p>
+                        At Lumina Hospital, we restore wellness with professionalism and compassion—contributing meaningfully
+                        to the health transformation of Ado-Ekiti and beyond.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Specializations — detailed, alternating layout -->
+        <section>
+            <div class="spec-section">
+                <div class="spec-intro">
+                    <h2>
+                        <span class="about-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#1b7b8a" stroke-width="1.5" class="about-ring"/>
+                                <path d="M12 7v10M7 12h10" stroke="#1b7b8a" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        Our specializations
+                    </h2>
+                    <h1>Six departments, one standard of care</h1>
+                </div>
+
+                <div class="spec-list">
+                    <!-- 1. Primary Care — images right -->
+                    <div class="spec-row">
+                        <div class="spec-content">
+                            <span class="specialist-dept">General Medicine</span>
+                            <h3>Primary care, built around you</h3>
+                            <p>
+                                From routine checkups to managing chronic conditions, our primary care physicians
+                                get to know you as a person, not just a chart. We coordinate everything—labs,
+                                referrals, follow-ups—so your care never falls through the cracks. Preventive
+                                screening, vaccinations, and personalized health guidance keep small issues from
+                                becoming big ones.
+                            </p>
+                        </div>
+                        <div class="spec-images">
+                            <img src="assets/hero_hospital.png" alt="Primary care consultation at Ado Care" class="img-a">
+                            <img src="assets/healthy_lifestyle.png" alt="Family preventive health guidance" class="img-b">
+                        </div>
+                    </div>
+
+                    <!-- 2. Mental Health — images left -->
+                    <div class="spec-row reverse">
+                        <div class="spec-content">
+                            <span class="specialist-dept">Behavioural Health</span>
+                            <h3>Support for the mind, not just the body</h3>
+                            <p>
+                                Our licensed therapists and psychiatrists create a calm, judgment-free space to
+                                work through anxiety, depression, grief, and everyday stress. Sessions are private
+                                and paced to you, whether that means weekly talk therapy, medication management,
+                                or a one-time consultation. Healing takes time, and we stay with you through it.
+                            </p>
+                        </div>
+                        <div class="spec-images">
+                            <img src="assets/doctor_neurology.png" alt="Therapist consultation room" class="img-a">
+                            <img src="assets/hero2.jpg" alt="Patient in a calm counselling session" class="img-b">
+                        </div>
+                    </div>
+
+                    <!-- 3. Diagnostics — images right -->
+                    <div class="spec-row">
+                        <div class="spec-content">
+                            <span class="specialist-dept">Laboratory &amp; Imaging</span>
+                            <h3>Answers you can trust, fast</h3>
+                            <p>
+                                Same-day bloodwork, ultrasound, X-ray, and CT services mean fewer days spent
+                                waiting and wondering. Our lab is calibrated and cross-checked against
+                                international standards, and every result is reviewed by a physician before it
+                                reaches you—so you get clarity, not just numbers.
+                            </p>
+                        </div>
+                        <div class="spec-images">
+                            <img src="assets/healthy_lifestyle.png" alt="Diagnostic laboratory testing" class="img-a">
+                            <img src="assets/hero3.jpg" alt="Imaging and scan review" class="img-b">
+                        </div>
+                    </div>
+
+                    <!-- 4. Orthopedics — images left -->
+                    <div class="spec-row reverse">
+                        <div class="spec-content">
+                            <span class="specialist-dept">Bone &amp; Joint</span>
+                            <h3>Getting you moving again</h3>
+                            <p>
+                                Whether it's a sports injury, arthritis, or a joint that's been aching for years,
+                                our orthopedic team builds a plan around your mobility goals. We lean on
+                                physiotherapy and minimally invasive techniques first, reserving surgery for when
+                                it's truly the better option.
+                            </p>
+                        </div>
+                        <div class="spec-images">
+                            <img src="assets/doctor_neurology.png" alt="Orthopedic assessment" class="img-a">
+                            <img src="assets/hero4.jpg" alt="Physiotherapy and mobility rehab" class="img-b">
+                        </div>
+                    </div>
+
+                    <!-- 5. Pediatrics — images right -->
+                    <div class="spec-row">
+                        <div class="spec-content">
+                            <span class="specialist-dept">Child &amp; Adolescent Health</span>
+                            <h3>Care that grows with your child</h3>
+                            <p>
+                                From newborn checkups to teenage growth spurts, our pediatric team tracks
+                                development milestones and keeps immunizations on schedule. We talk to kids at
+                                their level and to parents in plain language, so nobody leaves an appointment
+                                with unanswered questions.
+                            </p>
+                        </div>
+                        <div class="spec-images">
+                            <img src="assets/nutrition_superfoods.png" alt="Pediatric wellness checkup" class="img-a">
+                            <img src="assets/hero5.jpg" alt="Child and parent at a consultation" class="img-b">
+                        </div>
+                    </div>
+
+                    <!-- 6. Cardiology — images left -->
+                    <div class="spec-row reverse">
+                        <div class="spec-content">
+                            <span class="specialist-dept">Heart &amp; Vascular</span>
+                            <h3>Protecting the heart of the matter</h3>
+                            <p>
+                                Our cardiologists combine advanced diagnostics—ECG, echocardiography, stress
+                                testing—with honest conversations about lifestyle and risk. Whether you're
+                                managing hypertension or recovering from a cardiac event, we build a treatment
+                                plan that fits your life, not just your chart.
+                            </p>
+                        </div>
+                        <div class="spec-images">
+                            <img src="assets/doctor_cardiology.png" alt="Cardiology diagnostics" class="img-a">
+                            <img src="assets/hero6.jpg" alt="Heart health monitoring" class="img-b">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section" aria-labelledby="mission-title">
+            <div class="mission-layout">
+                <div class="mission-copy mission-reveal">
+                    <div class="mission-label">
+                        <span class="mission-mark" aria-hidden="true"><i class="fas fa-heart-pulse"></i></span>
+                        <span>Our mission</span>
+                    </div>
+                    <h1 id="mission-title">Care that puts people first.</h1>
+                    <p class="mission-lead">
+                        We make excellent healthcare feel more human, more accessible, and easier to understand for every family we serve.
+                    </p>
+                    <p>
+                        Our clinicians pair modern diagnostics and treatment with clear communication, so patients in Ado-Ekiti and surrounding communities can make informed decisions about their health.
+                    </p>
+                    <a class="mission-link" href="index.html#book-appointment">Meet us where you are <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="mission-visual mission-reveal">
+                    <img src="assets/Modern miracle workers - Catholic Review.jpg" alt="A healthcare professional caring for a patient">
+                    <div class="mission-note">
+                        <span class="mission-note-icon"><i class="fas fa-hand-holding-heart"></i></span>
+                        <p>Every patient deserves to feel heard, safe, and supported.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-commitments">
+                <div class="commitment mission-reveal">
+                    <strong>01</strong>
+                    <div><h3>Accessible by design</h3><p>Quality care without unnecessary barriers.</p></div>
+                </div>
+                <div class="commitment mission-reveal">
+                    <strong>02</strong>
+                    <div><h3>Always learning</h3><p>Better outcomes through training and teamwork.</p></div>
+                </div>
+                <div class="commitment mission-reveal">
+                    <strong>03</strong>
+                    <div><h3>Rooted in community</h3><p>Prevention and partnership beyond our walls.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="about-us values-about">
+                <div class="about-text" style="flex: 1 1 100%; max-width: 100%;">
+                    <h2>
+                        <span class="about-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#1b7b8a" stroke-width="1.5" class="about-ring"/>
+                                <path d="M12 7v10M7 12h10" stroke="#1b7b8a" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        Our Values
+                    </h2>
+                    <h1>What guides every decision</h1>
+                </div>
+
+                <div class="values-flow" aria-hidden="true">
+                    <svg viewBox="0 0 1000 28" preserveAspectRatio="none">
+                        <path d="M18 14 H982"/>
+                        <path class="flow-arrow" d="M965 7 L982 14 L965 21"/>
+                        <circle cx="18" cy="14" r="5">
+                               <animate attributeName="cx" values="18;138;258;378;498;618;738;858;982;858;738;618;498;378;258;138;18" keyTimes="0;0.0625;0.125;0.1875;0.25;0.3125;0.375;0.4375;0.5;0.5625;0.625;0.6875;0.75;0.8125;0.875;0.9375;1" dur="3s" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" repeatCount="indefinite"/>
+                               <animate attributeName="cy" values="14;5;14;5;14;5;14;5;14;5;14;5;14;5;14;5;14" keyTimes="0;0.0625;0.125;0.1875;0.25;0.3125;0.375;0.4375;0.5;0.5625;0.625;0.6875;0.75;0.8125;0.875;0.9375;1" dur="3s" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                <div class="values-network" aria-label="Ado Care values">
+                    <svg class="values-wireframe" viewBox="0 0 1000 560" aria-hidden="true" preserveAspectRatio="none">
+                        <path d="M110 105 L890 105 L710 280 L890 455 L110 455 L290 280 L110 105"/>
+                        <path class="wire-pulse" d="M110 105 L890 105 L710 280 L890 455 L110 455 L290 280 L110 105"/>
+                        <circle cx="500" cy="280" r="7"/>
+                        <circle cx="110" cy="105" r="5"/><circle cx="890" cy="105" r="5"/>
+                        <circle cx="110" cy="455" r="5"/><circle cx="890" cy="455" r="5"/>
+                    </svg>
+                    <div class="value-card value-card--compassion value-reveal">
+                        <i class="fas fa-heart"></i>
+                        <h3>Compassion</h3><p>We begin by listening, with empathy, patience, and respect.</p>
+                    </div>
+                    <div class="value-card value-card--excellence value-reveal">
+                        <i class="fas fa-star"></i>
+                        <h3>Excellence</h3><p>We keep learning and pursue the highest standards of care.</p>
+                    </div>
+                    <div class="value-card value-card--integrity value-reveal">
+                        <i class="fas fa-shield-heart"></i>
+                        <h3>Integrity</h3><p>We communicate honestly and protect every patient’s trust.</p>
+                    </div>
+                    <div class="value-card value-card--access value-reveal">
+                        <i class="fas fa-door-open"></i>
+                        <h3>Access</h3><p>We work to keep quality healthcare available to our community.</p>
+                    </div>
+                    <div class="value-card value-card--teamwork value-reveal">
+                        <i class="fas fa-people-group"></i>
+                        <h3>Teamwork</h3><p>We collaborate across every role for coordinated care.</p>
+                    </div>
+                    <div class="value-card value-card--community value-reveal">
+                        <i class="fas fa-house-chimney-heart"></i>
+                        <h3>Community</h3><p>We support healthier lives in Ado-Ekiti and beyond.</p>
+                    </div>
+                    <div class="values-center" aria-hidden="true"><i class="fas fa-plus"></i><span>one standard<br>of care</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA back to booking -->
+        <section style="padding: 20px 0 40px;">
+            <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px; text-align: center;">
+                <div class="about-us" style="margin: 0; flex-direction: column; text-align: center; gap: 20px;">
+                    <div class="about-text" style="flex: none; max-width: 100%;">
+                        <h2 style="opacity: 1;">Ready when you are</h2>
+                        <h1 style="opacity: 1; margin-bottom: 12px;">Book a visit with Ado Care</h1>
+                        <p style="opacity: 1; margin: 0 auto 20px; max-width: 520px;">
+                            Same-day availability with specialists who put your wellbeing first.
+                        </p>
+                        <a class="button" href="index.html#book-appointment" style="display: inline-flex;">Book An Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">Ado Care</div>
+                <p>
+                    Private hospital with a human touch.
+                    Compassionate care, modern medicine, and a healthier tomorrow for Ado-Ekiti and beyond.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" title="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)" title="X">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" title="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="specialists.html">Our Specialists</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="index.html#book-appointment">Book Appointment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Neurosurgery</a></li>
+                    <li><a href="#">General Surgery</a></li>
+                    <li><a href="#">Pediatrics</a></li>
+                    <li><a href="#">Emergency Care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <span>📍</span>
+                        <span>25 Harbor Avenue, Ado-Ekiti</span>
+                    </li>
+                    <li>
+                        <span>📞</span>
+                        <span>+234 800 123 4567</span>
+                    </li>
+                    <li>
+                        <span>✉️</span>
+                        <span>hello@adocare.com</span>
+                    </li>
+                    <li>
+                        <span>🕒</span>
+                        <span>Mon – Fri: 8AM – 8PM<br>Emergency: 24/7</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Ado Care — Compassionate care, advanced medicine.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
