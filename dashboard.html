@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    <title>Dashboard | Ado Care</title>
+</head>
+<body class="appointment-page">
+    <nav class="nav"><div class="logo">Ado Care</div><div class="links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="specialists.html">Our Specialists</a><a href="blogs.html">Blogs</a></div><div class="right-links"><a class="button emergency" href="emergency.html">Emergency</a><a class="button" href="appointment.html">Book An Appointment</a><a class="button nav-auth-link" href="dashboard.html">Dashboard</a></div><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><div class="mobile-menu" id="mobileMenu"><div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="specialists.html">Our Specialists</a><a href="blogs.html">Blogs</a></div><div class="mobile-actions"><a class="button emergency" href="emergency.html">Emergency</a><a class="button" href="appointment.html">Book An Appointment</a><a class="button nav-auth-link" href="dashboard.html">Dashboard</a></div></div></nav>
+    <main class="dashboard-main">
+        <section class="dashboard-header">
+            <div><div class="appointment-kicker"><i class="fas fa-chart-line"></i> Patient dashboard</div><h1>Your care, in one place.</h1><p>Welcome back. Review your care history, upcoming visits, and simple ways to stay well.</p></div>
+            <div class="dashboard-actions"><a class="button" href="appointment.html#booking-panel"><i class="fas fa-plus"></i> Book an appointment</a><button class="button dashboard-signout" type="button">Sign out</button></div>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="dashboard-column">
+                <article class="dashboard-card next-visit-card">
+                    <div class="dashboard-card-top"><span class="appointment-kicker">Next scheduled visit</span><span class="status-pill">Confirmed</span></div>
+                    <div class="next-visit-date"><strong>18</strong><span>SEP<br>2026</span></div>
+                    <div><h2>Cardiology follow-up</h2><p><i class="fas fa-user-doctor"></i> Dr. M. Rivera &nbsp; <i class="fas fa-clock"></i> 10:30 AM</p><p><i class="fas fa-location-dot"></i> Ado Care, Heart &amp; Vascular Unit</p></div>
+                    <a class="dashboard-text-link" href="appointment.html#booking-panel">Manage appointment <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="dashboard-card visits-card">
+                    <div class="dashboard-card-top"><div><span class="appointment-kicker">Your care history</span><h2>Recent visits</h2></div><span class="visit-count">6 visits</span></div>
+                    <div class="visit-list">
+                        <div class="visit-row"><span class="visit-date">12<br><small>JUN 2026</small></span><div><h3>Primary care consultation</h3><p>Dr. N. Adeyemi · Completed</p></div><i class="fas fa-check-circle"></i></div>
+                        <div class="visit-row"><span class="visit-date">04<br><small>APR 2026</small></span><div><h3>Blood pressure review</h3><p>Dr. M. Rivera · Completed</p></div><i class="fas fa-check-circle"></i></div>
+                        <div class="visit-row"><span class="visit-date">19<br><small>FEB 2026</small></span><div><h3>Laboratory diagnostics</h3><p>Ado Care Lab · Completed</p></div><i class="fas fa-check-circle"></i></div>
+                        <div class="visit-row"><span class="visit-date">08<br><small>DEC 2025</small></span><div><h3>Wellness checkup</h3><p>Dr. N. Adeyemi · Completed</p></div><i class="fas fa-check-circle"></i></div>
+                        <div class="visit-row"><span class="visit-date">21<br><small>OCT 2025</small></span><div><h3>Nutrition consultation</h3><p>Ado Care Wellness Team · Completed</p></div><i class="fas fa-check-circle"></i></div>
+                        <div class="visit-row"><span class="visit-date">06<br><small>AUG 2025</small></span><div><h3>Annual health screening</h3><p>Ado Care Diagnostics · Completed</p></div><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="dashboard-column">
+                <article class="dashboard-card tips-card">
+                    <div class="dashboard-card-top"><div><span class="appointment-kicker">Small steps</span><h2>Tips for better health</h2></div><i class="fas fa-sun dashboard-feature-icon"></i></div>
+                    <div class="tip-line"><i class="fas fa-glass-water"></i><div><h3>Keep water close</h3><p>Regular sips throughout the day support energy and focus.</p></div></div>
+                    <div class="tip-line"><i class="fas fa-person-walking"></i><div><h3>Move for ten minutes</h3><p>A short walk after meals can help circulation and digestion.</p></div></div>
+                    <div class="tip-line"><i class="fas fa-moon"></i><div><h3>Protect your sleep</h3><p>A consistent bedtime gives your body time to restore.</p></div></div>
+                    <a class="dashboard-text-link" href="blogs.html">Read the wellness blog <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="dashboard-card feedback-card">
+                    <span class="appointment-kicker">Your voice matters</span><h2>How was your last visit?</h2><p>Tell us about the care you received so we can keep improving the patient experience.</p>
+                    <form id="feedbackForm"><div class="rating" role="radiogroup" aria-label="Rate your visit"><button type="button" class="rating-star" data-rating="1" aria-label="1 star">★</button><button type="button" class="rating-star" data-rating="2" aria-label="2 stars">★</button><button type="button" class="rating-star" data-rating="3" aria-label="3 stars">★</button><button type="button" class="rating-star" data-rating="4" aria-label="4 stars">★</button><button type="button" class="rating-star" data-rating="5" aria-label="5 stars">★</button></div><input type="hidden" id="feedbackRating" required><label class="sr-only" for="feedbackComment">Your comment</label><textarea id="feedbackComment" rows="3" placeholder="Share a few words about your experience" required></textarea><button class="btn-full" type="submit"><i class="fas fa-paper-plane"></i> Send feedback</button><p class="form-message" id="feedbackMessage" role="status"></p></form>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

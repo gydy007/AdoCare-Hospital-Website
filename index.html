@@ -19,9 +19,9 @@
         </div>
 
         <div class="right-links">
-            <a class="button emergency" href="">Emergency</a>
-            <a class="button" href="#appointment">Book An Appointment</a>
-            <a class="button" href="">Sign In</a>
+            <a class="button emergency" href="emergency.html">Emergency</a>
+            <a class="button" href="appointment.html">Book An Appointment</a>
+            <a class="button nav-auth-link" href="appointment.html#auth-panel">Sign In</a>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -40,9 +40,9 @@
                 <a href="blogs.html">Blogs</a>
             </div>
             <div class="mobile-actions">
-                <a class="button emergency" href="">Emergency</a>
-                <a class="button" href="#appointment">Book An Appointment</a>
-                <a class="button" href="">Sign In</a>
+                <a class="button emergency" href="emergency.html">Emergency</a>
+                <a class="button" href="appointment.html">Book An Appointment</a>
+                <a class="button nav-auth-link" href="appointment.html#auth-panel">Sign In</a>
             </div>
         </div>
 
@@ -297,6 +297,16 @@
                     <p style="margin-top:1.2rem; font-size:0.8rem; color:#4c6f82;">New patient? <a href="#" style="color:#1e7b9e; font-weight:600;">Create account</a></p>
                     <div id="signinMessage" style="margin-top:0.6rem; font-weight:500; color:#1e7b9e; display:none;">✓ Welcome back, you're signed in.</div>
                 </div>
+
+                <div class="signed-in-home" id="signedInHome" hidden>
+                    <img src="assets/Modern miracle workers - Catholic Review.jpg" alt="Ado Care team member supporting a patient">
+                    <div class="signed-in-overlay">
+                        <span class="appointment-kicker">Welcome back</span>
+                        <h3>Your care is in good hands.</h3>
+                        <p>Review your visits, manage appointments, and keep your health goals moving forward.</p>
+                        <a class="button" href="dashboard.html"><i class="fas fa-chart-line"></i> Open dashboard</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -310,7 +320,7 @@
                     <p style="color:#2b4a5e;">Immediate care, every moment matters.</p>
                     </div>
                     <div style="display:flex; gap:0.8rem;">
-                    <button class="btn-primary" style="background:#b13e3e; box-shadow:0 4px 12px rgba(177,62,62,0.2);"><i class="fas fa-ambulance"></i> Call now</button>
+                    <a class="btn-primary" href="tel:+2348001234567" style="background:#b13e3e; box-shadow:0 4px 12px rgba(177,62,62,0.2);"><i class="fas fa-ambulance"></i> Call now</a>
                     <button class="btn-outline" style="border-color:#b13e3e; color:#b13e3e;"><i class="fas fa-map-marker-alt"></i> Find ER</button>
                     </div>
                 </div>
@@ -369,7 +379,7 @@
                     <li><a href="#">Neurosurgery</a></li>
                     <li><a href="#">General Surgery</a></li>
                     <li><a href="#">Pediatrics</a></li>
-                    <li><a href="#">Emergency Care</a></li>
+                    <li><a href="emergency.html">Emergency Care</a></li>
                 </ul>
             </div>
 

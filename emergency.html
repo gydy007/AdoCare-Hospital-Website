@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Emergency care procedures and contact information for Ado Care Hospital.">
+    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Emergency Care | Ado Care</title>
+</head>
+<body class="emergency-page">
+    <nav class="nav">
+        <div class="logo">Ado Care</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="specialists.html">Our Specialists</a>
+            <a href="blogs.html">Blogs</a>
+        </div>
+        <div class="right-links">
+            <a class="button emergency" href="emergency.html" aria-current="page">Emergency</a>
+            <a class="button" href="appointment.html">Book An Appointment</a>
+            <a class="button nav-auth-link" href="appointment.html#auth-panel">Sign In</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-links">
+                <a href="index.html">Home</a><a href="about.html">About Us</a>
+                <a href="specialists.html">Our Specialists</a><a href="blogs.html">Blogs</a>
+            </div>
+            <div class="mobile-actions">
+                <a class="button emergency" href="emergency.html">Emergency</a>
+                <a class="button" href="appointment.html">Book An Appointment</a>
+                <a class="button nav-auth-link" href="appointment.html#auth-panel">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="emergency-hero">
+            <div class="emergency-hero-copy">
+                <span class="emergency-kicker"><i class="fas fa-heart-pulse"></i> Ado Care Emergency Unit</span>
+                <h1>When every second matters, start here.</h1>
+                <p>Our emergency team is available 24 hours a day, every day. Call ahead when possible so our team can prepare for your arrival.</p>
+                <div class="emergency-actions">
+                    <a class="button emergency" href="tel:+2348001234567"><i class="fas fa-phone"></i> Call emergency desk</a>
+                    <a class="button" href="#arrival-procedure"><i class="fas fa-arrow-down"></i> See the procedure</a>
+                </div>
+            </div>
+            <div class="emergency-hero-panel">
+                <span class="live-dot"></span>
+                <span>Emergency desk</span>
+                <strong>+234 800 123 4567</strong>
+                <small>Open now · 24 hours</small>
+            </div>
+        </section>
+
+        <section class="emergency-alert" aria-label="Urgent warning">
+            <i class="fas fa-triangle-exclamation"></i>
+            <p><strong>Life-threatening emergency?</strong> Call your local emergency service immediately, then contact Ado Care. Do not drive yourself if you are seriously unwell.</p>
+        </section>
+
+        <section class="emergency-content" id="arrival-procedure">
+            <div class="emergency-heading">
+                <span class="emergency-kicker">Our procedure</span>
+                <h2>What happens when you arrive</h2>
+                <p>Knowing the next step can make a difficult moment feel more manageable. Our teams prioritize immediate danger first while keeping families informed.</p>
+            </div>
+            <div class="procedure-grid">
+                <article class="procedure-card"><span>01</span><i class="fas fa-phone-volume"></i><h3>Call or arrive</h3><p>Call the emergency desk, or come directly to our emergency entrance. Ambulance arrivals are received by the clinical team.</p></article>
+                <article class="procedure-card"><span>02</span><i class="fas fa-stethoscope"></i><h3>Rapid assessment</h3><p>A nurse quickly checks the patient’s condition and identifies anything that needs immediate attention.</p></article>
+                <article class="procedure-card"><span>03</span><i class="fas fa-user-doctor"></i><h3>Urgent treatment</h3><p>The appropriate doctor and support team begin care, tests, monitoring, or stabilization without unnecessary delay.</p></article>
+                <article class="procedure-card"><span>04</span><i class="fas fa-clipboard-check"></i><h3>Next steps</h3><p>We explain the care plan, prescriptions, referrals, admission, or safe discharge instructions before you leave.</p></article>
+            </div>
+        </section>
+
+        <section class="emergency-columns">
+            <div class="emergency-info-card">
+                <span class="emergency-kicker">Before you come</span>
+                <h2>Bring what helps us help you</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> A list of current medicines and allergies</li>
+                    <li><i class="fas fa-check"></i> Identification and insurance information, if available</li>
+                    <li><i class="fas fa-check"></i> A trusted contact person and relevant medical history</li>
+                    <li><i class="fas fa-check"></i> Comfort items for a child, when appropriate</li>
+                </ul>
+            </div>
+            <div class="emergency-info-card emergency-info-card--soft">
+                <span class="emergency-kicker">Find the unit</span>
+                <h2>Emergency entrance</h2>
+                <p>25 Harbor Avenue, Ado-Ekiti</p>
+                <p class="muted">The emergency entrance is open 24/7. Follow the red emergency signs when you arrive.</p>
+                <a class="emergency-text-link" href="tel:+2348001234567">Call for directions <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand"><div class="footer-logo">Ado Care</div><p>Private hospital with a human touch. Compassionate care, modern medicine, and a healthier tomorrow for Ado-Ekiti and beyond.</p></div>
+            <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="specialists.html">Our Specialists</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="appointment.html">Book Appointment</a></li></ul></div>
+            <div class="footer-column"><h4>Emergency</h4><ul><li><a href="emergency.html">Emergency procedure</a></li><li><a href="tel:+2348001234567">Call emergency desk</a></li><li><a href="appointment.html">Patient appointments</a></li></ul></div>
+            <div class="footer-column"><h4>Contact Us</h4><ul class="footer-contact"><li><span>📍</span><span>25 Harbor Avenue, Ado-Ekiti</span></li><li><span>📞</span><span>+234 800 123 4567</span></li><li><span>🕒</span><span>Emergency: 24/7</span></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Ado Care — Compassionate care, advanced medicine.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

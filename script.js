@@ -213,6 +213,11 @@ function calculateReadTime() {
 
 // Observe all elements that should animate on scroll
 document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.dashboard-shell') && !localStorage.getItem('adoCareUser')) {
+        window.location.replace('appointment.html#auth-panel');
+        return;
+    }
+
     // About section elements
     const aboutImage = document.querySelector('.about-image img');
     const aboutH2 = document.querySelector('.about-text h2');
@@ -269,6 +274,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Validate form
             if (email && password) {
+                if (password !== 'admin') {
+                    alert('Use password "admin" for this demo sign in');
+                    return;
+                }
+
                 // Validate email format
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(email)) {
@@ -276,6 +286,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
                 
+                localStorage.setItem('adoCareUser', email);
+                window.location.href = 'dashboard.html';
+
                 // Show success message
                 const messageDiv = document.getElementById('signinMessage');
                 messageDiv.style.display = 'block';
@@ -442,6 +455,115 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Calculate blog read times
     calculateReadTime();
+
+    const authLinks = document.querySelectorAll('.nav-auth-link');
+    function refreshAuthNavigation() {
+        const userEmail = localStorage.getItem('adoCareUser');
+        const signinCard = document.getElementById('signinCard');
+        const signedInHome = document.getElementById('signedInHome');
+        authLinks.forEach(link => {
+            link.textContent = userEmail ? 'Dashboard' : 'Sign In';
+            link.href = userEmail ? 'dashboard.html' : 'appointment.html#auth-panel';
+        });
+        if (signinCard) signinCard.hidden = Boolean(userEmail);
+        if (signedInHome) signedInHome.hidden = !userEmail;
+    }
+
+    refreshAuthNavigation();
+
+    document.querySelectorAll('[data-auth-tab]').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const selectedAuth = tab.dataset.authTab;
+            document.querySelectorAll('[data-auth-tab]').forEach(item => {
+                const selected = item === tab;
+                item.classList.toggle('is-active', selected);
+                item.setAttribute('aria-selected', selected ? 'true' : 'false');
+            });
+            document.querySelectorAll('[data-auth-form]').forEach(form => {
+                form.classList.toggle('is-hidden', form.dataset.authForm !== selectedAuth);
+            });
+        });
+    });
+
+    const pageSigninForm = document.getElementById('pageSigninForm');
+    if (pageSigninForm) {
+        pageSigninForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const email = pageSigninForm.elements.email.value.trim();
+            const password = pageSigninForm.elements.password.value;
+            const message = document.getElementById('signinPageMessage');
+            if (password !== 'admin') {
+                message.textContent = 'Use password "admin" for this demo sign in.';
+                message.className = 'form-message is-error';
+                return;
+            }
+            localStorage.setItem('adoCareUser', email);
+            message.textContent = 'Signed in successfully. Dashboard is now available in the navigation.';
+            message.className = 'form-message is-success';
+            refreshAuthNavigation();
+            window.location.href = 'dashboard.html';
+        });
+    }
+
+    const pageSignupForm = document.getElementById('pageSignupForm');
+    if (pageSignupForm) {
+        pageSignupForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const email = pageSignupForm.elements.email.value.trim();
+            localStorage.setItem('adoCareUser', email);
+            const message = document.getElementById('signupPageMessage');
+            message.textContent = 'Account created. Dashboard is now available in the navigation.';
+            message.className = 'form-message is-success';
+            refreshAuthNavigation();
+        });
+    }
+
+    const pageAppointmentForm = document.getElementById('pageAppointmentForm');
+    if (pageAppointmentForm) {
+        pageAppointmentForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const message = document.getElementById('appointmentPageMessage');
+            message.textContent = 'Request received. Our care coordinator will call you shortly.';
+            message.className = 'form-message is-success';
+            pageAppointmentForm.reset();
+        });
+    }
+
+    const feedbackForm = document.getElementById('feedbackForm');
+    const feedbackRating = document.getElementById('feedbackRating');
+    if (feedbackForm && feedbackRating) {
+        document.querySelectorAll('.rating-star').forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.dataset.rating;
+                feedbackRating.value = rating;
+                document.querySelectorAll('.rating-star').forEach(item => {
+                    item.classList.toggle('is-selected', Number(item.dataset.rating) <= Number(rating));
+                });
+            });
+        });
+
+        feedbackForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const message = document.getElementById('feedbackMessage');
+            if (!feedbackRating.value) {
+                message.textContent = 'Please select a rating before sending your feedback.';
+                message.className = 'form-message is-error';
+                return;
+            }
+            message.textContent = 'Thank you. Your feedback has been received.';
+            message.className = 'form-message is-success';
+            feedbackForm.reset();
+            feedbackRating.value = '';
+            document.querySelectorAll('.rating-star').forEach(star => star.classList.remove('is-selected'));
+        });
+    }
+
+    document.querySelectorAll('.dashboard-signout').forEach(button => {
+        button.addEventListener('click', () => {
+            localStorage.removeItem('adoCareUser');
+            window.location.href = 'index.html';
+        });
+    });
 
     document.querySelectorAll('.read-article-btn').forEach(button => {
         button.addEventListener('click', () => openArticle(button.dataset.article));

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or create an Ado Care account and request a hospital appointment.">
+    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Book an Appointment | Ado Care</title>
+</head>
+<body class="appointment-page">
+    <nav class="nav">
+        <div class="logo">Ado Care</div>
+        <div class="links">
+            <a href="index.html">Home</a><a href="about.html">About Us</a>
+            <a href="specialists.html">Our Specialists</a><a href="blogs.html">Blogs</a>
+        </div>
+        <div class="right-links">
+            <a class="button emergency" href="emergency.html">Emergency</a>
+            <a class="button active" href="appointment.html">Book An Appointment</a>
+            <a class="button nav-auth-link" href="appointment.html#auth-panel">Sign In</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="specialists.html">Our Specialists</a><a href="blogs.html">Blogs</a></div>
+            <div class="mobile-actions"><a class="button emergency" href="emergency.html">Emergency</a><a class="button" href="appointment.html">Book An Appointment</a><a class="button nav-auth-link" href="appointment.html#auth-panel">Sign In</a></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="appointment-hero">
+            <span class="appointment-kicker"><i class="fas fa-calendar-check"></i> Patient access</span>
+            <h1>Care starts with a conversation.</h1>
+            <p>Sign in to your account or create one, then tell us when you would like to be seen. Our team will confirm the best available time.</p>
+        </section>
+
+        <section class="appointment-workspace">
+            <div class="auth-panel" id="auth-panel">
+                <div class="auth-heading"><span class="appointment-kicker">Your account</span><h2>Welcome to Ado Care</h2><p>Choose how you would like to continue.</p></div>
+                <div class="auth-tabs" role="tablist" aria-label="Account access">
+                    <button class="auth-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="signin-panel" data-auth-tab="signin">Sign in</button>
+                    <button class="auth-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel" data-auth-tab="signup">Sign up</button>
+                </div>
+                <form class="auth-form" id="pageSigninForm" data-auth-form="signin">
+                    <div class="form-group"><label for="signin-email">Email address</label><input id="signin-email" name="email" type="email" placeholder="you@example.com" required></div>
+                    <div class="form-group"><label for="signin-password">Password</label><input id="signin-password" name="password" type="password" placeholder="Enter your password" required></div>
+                    <button class="btn-full" type="submit"><i class="fas fa-arrow-right"></i> Sign in</button>
+                    <p class="form-message" id="signinPageMessage" role="status"></p>
+                </form>
+                <form class="auth-form is-hidden" id="pageSignupForm" data-auth-form="signup">
+                    <div class="form-group"><label for="signup-name">Full name</label><input id="signup-name" name="name" type="text" placeholder="Your full name" required></div>
+                    <div class="form-group"><label for="signup-email">Email address</label><input id="signup-email" name="email" type="email" placeholder="you@example.com" required></div>
+                    <div class="form-group"><label for="signup-password">Create password</label><input id="signup-password" name="password" type="password" minlength="6" placeholder="At least 6 characters" required></div>
+                    <button class="btn-full" type="submit"><i class="fas fa-user-plus"></i> Create account</button>
+                    <p class="form-message" id="signupPageMessage" role="status"></p>
+                </form>
+            </div>
+
+            <div class="booking-panel" id="booking-panel">
+                <div class="booking-heading"><span class="appointment-kicker">Next step</span><h2>Request an appointment</h2><p>Share a few details and our care coordinator will call to confirm your visit.</p></div>
+                <form id="pageAppointmentForm" class="booking-form">
+                    <div class="booking-form-grid">
+                        <div class="form-group"><label for="booking-name">Full name</label><input id="booking-name" name="name" type="text" placeholder="e.g. Jane Cooper" required></div>
+                        <div class="form-group"><label for="booking-phone">Phone number</label><input id="booking-phone" name="phone" type="tel" placeholder="+234 800 123 4567" required></div>
+                        <div class="form-group"><label for="booking-department">Department</label><select id="booking-department" name="department" required><option value="">Choose a department</option><option>Primary Care</option><option>Cardiology</option><option>Pediatrics</option><option>Diagnostics</option><option>Orthopedics</option><option>Mental Health</option></select></div>
+                        <div class="form-group"><label for="booking-date">Preferred date</label><input id="booking-date" name="date" type="date" required></div>
+                        <div class="form-group booking-full"><label for="booking-note">What can we help with?</label><textarea id="booking-note" name="note" rows="4" placeholder="Briefly describe your reason for visiting"></textarea></div>
+                    </div>
+                    <button class="btn-full" type="submit"><i class="fas fa-calendar-check"></i> Request appointment</button>
+                    <p class="form-message" id="appointmentPageMessage" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="footer-container"><div class="footer-brand"><div class="footer-logo">Ado Care</div><p>Private hospital with a human touch. Compassionate care, modern medicine, and a healthier tomorrow for Ado-Ekiti and beyond.</p></div><div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="specialists.html">Our Specialists</a></li><li><a href="blogs.html">Blogs</a></li></ul></div><div class="footer-column"><h4>Patient care</h4><ul><li><a href="appointment.html">Book Appointment</a></li><li><a href="emergency.html">Emergency Care</a></li><li><a href="appointment.html#auth-panel">Sign In</a></li></ul></div><div class="footer-column"><h4>Contact Us</h4><ul class="footer-contact"><li><span>📍</span><span>25 Harbor Avenue, Ado-Ekiti</span></li><li><span>📞</span><span>+234 800 123 4567</span></li><li><span>🕒</span><span>Mon - Fri: 8AM - 8PM</span></li></ul></div></div><div class="footer-bottom"><p>© 2026 Ado Care - Compassionate care, advanced medicine.</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
