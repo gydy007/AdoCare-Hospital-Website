@@ -120,7 +120,7 @@ const articles = {
         title: 'A Practical Guide to Protecting Your Heart Every Day',
         author: 'Dr. M. Rivera',
         readTime: '6 min read',
-        image: 'assets/doctor_cardiology.png',
+        image: 'assets/heart (1).jpg',
         body: [
             'Heart health is shaped by everyday choices as much as by medical treatment. Understanding your blood pressure, cholesterol, blood sugar, and family history gives you a clear starting point.',
             'Choose more meals prepared at home, keep salt and highly processed foods occasional, and make movement part of your routine. Even a 30-minute walk can support circulation and improve energy.',
@@ -132,7 +132,7 @@ const articles = {
         title: 'Simple Ways to Create More Mental Space',
         author: 'Dr. S. Chen',
         readTime: '4 min read',
-        image: 'assets/doctor_neurology.png',
+        image: 'assets/mindBody.jpg',
         body: [
             'Mental wellbeing is not about feeling positive every minute. It is about having practical ways to notice stress, recover, and ask for support when you need it.',
             'Protect a regular sleep schedule, step away from screens during breaks, and try a short breathing exercise when your thoughts feel crowded. Sharing concerns with someone you trust can also reduce the weight of a difficult day.',
@@ -144,7 +144,7 @@ const articles = {
         title: 'Helping Children Build Healthy Routines',
         author: 'Dr. A. Kapoor',
         readTime: '4 min read',
-        image: 'assets/nutrition_superfoods.png',
+        image: 'assets/child 1.jpg',
         body: [
             'Children learn healthy routines through repetition and example. Regular meals, active play, good sleep, and open conversations about feelings create a strong base for growth.',
             'Offer variety without turning food into a battle. Invite children to help choose or prepare simple meals, and keep water available throughout the day.',
@@ -156,7 +156,7 @@ const articles = {
         title: 'How to Support a Stronger Recovery After Treatment',
         author: 'Dr. N. Adeyemi',
         readTime: '5 min read',
-        image: 'assets/Professional therapist helping patient to walk using walker during rehabilitation in hospital _ Premium Photo.jpg',
+        image: 'assets/moving.jpg',
         body: [
             'Recovery is a process, and progress can look different from one person to the next. Following your care plan and communicating changes early can make the journey smoother.',
             'Rest when your body asks for it, but follow the movement guidance provided by your clinical team. Gentle, consistent activity often supports strength and confidence more effectively than doing too much at once.',
@@ -168,7 +168,7 @@ const articles = {
         title: 'Why Preventive Checkups Belong on Your Calendar',
         author: 'Ado Care Clinical Team',
         readTime: '3 min read',
-        image: 'assets/Nurse in rubber blue medical gloves takes blood from a vein for laboratory test_ medical tests _ Premium Photo.jpg',
+        image: 'assets/answers.jpg',
         body: [
             'Preventive care helps identify health risks before they become disruptive symptoms. The right schedule depends on your age, history, lifestyle, and family needs.',
             'Bring a list of medicines, questions, and any changes you have noticed to your appointment. Honest information helps your care team make better decisions with you.',
@@ -247,14 +247,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (fullName && date) {
                 // Show success message
                 const messageDiv = document.getElementById('appointmentMessage');
-                messageDiv.style.display = 'block';
+                messageDiv.classList.add('is-visible');
                 
                 // Reset form
                 this.reset();
                 
                 // Hide message after 5 seconds
                 setTimeout(() => {
-                    messageDiv.style.display = 'none';
+                    messageDiv.classList.remove('is-visible');
                 }, 5000);
             } else {
                 alert('Please fill in all required fields');
@@ -291,14 +291,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Show success message
                 const messageDiv = document.getElementById('signinMessage');
-                messageDiv.style.display = 'block';
+                messageDiv.classList.add('is-visible');
                 
                 // Reset form
                 this.reset();
                 
                 // Hide message after 5 seconds
                 setTimeout(() => {
-                    messageDiv.style.display = 'none';
+                    messageDiv.classList.remove('is-visible');
                 }, 5000);
             } else {
                 alert('Please fill in all fields');
@@ -315,13 +315,15 @@ const formInputs = document.querySelectorAll('.form-group input, .form-group tex
 formInputs.forEach(input => {
     // Add focus effects
     input.addEventListener('focus', function() {
-        this.parentElement.style.opacity = '1';
+        this.parentElement.classList.add('is-focused');
     });
     
     // Add blur effects
     input.addEventListener('blur', function() {
         if (!this.value) {
-            this.style.backgroundColor = '#f8fbfd';
+            this.classList.add('is-empty');
+        } else {
+            this.classList.remove('is-empty');
         }
     });
     
@@ -330,103 +332,24 @@ formInputs.forEach(input => {
         if (this.type === 'email') {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (this.value && !emailRegex.test(this.value)) {
-                this.style.borderColor = '#dc3545';
+                this.classList.add('is-invalid');
             } else {
-                this.style.borderColor = '#e0e8ec';
+                this.classList.remove('is-invalid');
             }
         }
         
         if (this.type === 'tel') {
             const phoneRegex = /^[\d\s\-\+\(\)]+$/;
             if (this.value && !phoneRegex.test(this.value)) {
-                this.style.borderColor = '#dc3545';
+                this.classList.add('is-invalid');
             } else {
-                this.style.borderColor = '#e0e8ec';
+                this.classList.remove('is-invalid');
             }
         }
     });
 });
 
-// ============================================
-//    BACK TO TOP BUTTON
-// ============================================
-function createBackToTopButton() {
-    const button = document.createElement('button');
-    button.innerHTML = '↑';
-    button.id = 'backToTop';
-    button.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        padding: 12px 16px;
-        background: #1b7b8a;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 24px;
-        cursor: pointer;
-        display: none;
-        z-index: 999;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(27, 123, 138, 0.3);
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-    `;
-    
-    document.body.appendChild(button);
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            button.style.display = 'flex';
-        } else {
-            button.style.display = 'none';
-        }
-    });
-    
-    button.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    button.addEventListener('mouseover', function() {
-        this.style.backgroundColor = '#13616e';
-        this.style.transform = 'scale(1.1)';
-    });
-    
-    button.addEventListener('mouseout', function() {
-        this.style.backgroundColor = '#1b7b8a';
-        this.style.transform = 'scale(1)';
-    });
-}
 
-// ============================================
-//    BLOG READ TIME CALCULATOR
-// ============================================
-// function calculateReadTime() {
-//     const articleExcerpts = document.querySelectorAll('.article-excerpt');
-//     const avgWordsPerMinute = 200;
-    
-//     articleExcerpts.forEach(excerpt => {
-//         const text = excerpt.textContent;
-//         const wordCount = text.trim().split(/\s+/).length;
-//         const readTime = Math.ceil(wordCount / avgWordsPerMinute);
-        
-//         const readTimeSpan = document.createElement('span');
-//         readTimeSpan.style.cssText = `
-//             font-size: 0.75rem;
-//             color: #1b7b8a;
-//             font-weight: 600;
-//         `;
-//         readTimeSpan.textContent = `${readTime} min read`;
-        
-//         const card = excerpt.closest('.article-card');
-//         const meta = card?.querySelector('.article-meta');
-//         if (meta) {
-//             meta.appendChild(readTimeSpan);
-//         }
-//     });
-// }
 
 // ============================================
 //    ANIMATE COUNTER NUMBERS
@@ -451,10 +374,10 @@ function animateCounter(element, target, duration = 2000) {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     // Create back to top button
-    createBackToTopButton();
+    // createBackToTopButton();
     
     // Calculate blog read times
-    calculateReadTime();
+    // calculateReadTime();
 
     const authLinks = document.querySelectorAll('.nav-auth-link');
     function refreshAuthNavigation() {
@@ -582,5 +505,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.value-reveal').forEach(element => observer.observe(element));
     
     // Add smooth scroll behavior for internal links
-    document.documentElement.style.scrollBehavior = 'smooth';
 })

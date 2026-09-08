@@ -840,6 +840,10 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
+.about-page-intro {
+    margin-top: 40px;
+}
+
 .about-image {
     flex: 1 1 35%;
 }
@@ -982,6 +986,11 @@ main {
 
 .values-about > .about-text {
     margin-bottom: -8px;
+}
+
+.values-heading-block {
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
 .values-about .values-heading {
@@ -3651,6 +3660,132 @@ body.reader-open {
     font-weight: 500;
     font-size: 0.9rem;
     animation: slideInBottom 0.4s ease-out;
+}
+
+#appointmentMessage,
+#signinMessage {
+    display: none;
+}
+
+#appointmentMessage.is-visible,
+#signinMessage.is-visible {
+    display: block;
+}
+
+.appointment-card {
+    padding: 2rem 2.2rem;
+}
+
+.appointment-intro {
+    margin-bottom: 1.4rem;
+}
+
+.button-icon {
+    margin-right: 8px;
+}
+
+.signin-icon {
+    font-size: 1.4rem;
+}
+
+.signin-help {
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    color: #4c6f82;
+}
+
+.signin-help a {
+    color: #1e7b9e;
+    font-weight: 600;
+}
+
+.form-group input.is-empty {
+    background-color: #f8fbfd;
+}
+
+.form-group input.is-invalid {
+    border-color: #dc3545;
+}
+
+.emergency-contact-section {
+    padding-top: 0;
+}
+
+.emergency-contact {
+    background: #f0f7fa;
+    border-radius: 60px;
+    padding: 2.2rem 2.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(30, 123, 158, 0.1);
+}
+
+.emergency-phone {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.emergency-copy {
+    color: #2b4a5e;
+}
+
+.emergency-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.emergency-actions .btn-primary,
+.emergency-actions .btn-outline {
+    border-color: #b13e3e;
+}
+
+.emergency-actions .btn-primary {
+    background: #b13e3e;
+    box-shadow: 0 4px 12px rgba(177, 62, 62, 0.2);
+}
+
+.emergency-actions .btn-outline {
+    color: #b13e3e;
+}
+
+.about-cta-section {
+    padding: 20px 0 40px;
+}
+
+.about-cta-container {
+    max-width: 900px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.about-cta {
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.about-cta-text {
+    flex: none;
+    max-width: 100%;
+}
+
+.about-cta-text h2,
+.about-cta-text h1,
+.about-cta-text p {
+    opacity: 1;
+}
+
+.about-cta-text h1 {
+    margin-bottom: 12px;
+}
+
+.about-cta-text p {
+    margin: 0 auto 20px;
+    max-width: 520px;
 }
 
 /* Emergency contact block */
