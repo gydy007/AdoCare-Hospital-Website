@@ -504,5 +504,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.mission-reveal').forEach(element => observer.observe(element));
     document.querySelectorAll('.value-reveal').forEach(element => observer.observe(element));
     
-    // Add smooth scroll behavior for internal links
 })
